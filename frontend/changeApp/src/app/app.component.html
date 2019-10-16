@@ -4,8 +4,8 @@
       <span>Nerd Assessment Test - Backend</span>
       <span class="fill-space"></span>
       <span>
-        <a mat-fab color="primary" class="git-button" href="https://github.com/cenzoreyes/NerdTest">
-          <img src="../assets/buttonIcon/GitHub-Mark-Light-32px.png">
+        <a mat-raised-button class="git-button" style="background-color: lime;color: deeppink" href="https://github.com/cenzoreyes/NerdTest">
+          See it on Git!
         </a>
       </span>
     </mat-toolbar>
@@ -16,7 +16,7 @@
         <mat-form-field appearance="outline" color="accent">
           <mat-icon matSuffix>attach_money</mat-icon>
           <mat-label>Enter a dollar amount</mat-label>
-          <input matInput placeholder="0.00" formControlName="amountInput" [(ngModel)]="amount" required>
+          <input matInput placeholder="0.00" maxlength="8" formControlName="amountInput" [(ngModel)]="amount" required>
         </mat-form-field>
       </ng-form>
     </div>
@@ -25,7 +25,7 @@
         Make Change
       </button>
     </div>
-    <div class="output">
+    <div *ngIf="coinData.amount > 0" class="output">
       <h4>Silver dollars: {{coinData.silverDollar}}</h4>
       <h4>Half dollars: {{coinData.halfDollar}}</h4>
       <h4>Quarters: {{coinData.quarter}}</h4>
@@ -35,4 +35,7 @@
     </div>
     <router-outlet></router-outlet>
   </div>
+<footer class="footer-bar" >
+  <p>Vincenzo Reyes <b>|</b> cenzoreyes@gmail.com <b>|</b> (773)-837-1404</p>
+</footer>
 </body>
