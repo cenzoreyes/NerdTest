@@ -1,9 +1,9 @@
 package com.nat.change.dataAccess.models;
 
-public class ChangeRequest {
+public class Request {
     private double amount;
 
-    public ChangeRequest() {
+    public Request() {
     }
 
     public double getAmount() {

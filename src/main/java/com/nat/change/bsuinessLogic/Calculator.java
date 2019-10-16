@@ -1,14 +1,22 @@
 package com.nat.change.bsuinessLogic;
 
-import com.nat.change.dataAccess.models.ChangeRequest;
+import com.nat.change.dataAccess.models.Request;
 import com.nat.change.dataAccess.models.Coins;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ *
+ */
 public class Calculator {
 
-    public Coins makeChange(ChangeRequest request) {
+    /**
+     *
+     * @param request
+     * @return
+     */
+    public Coins makeChange(Request request) {
         BigDecimal value = new BigDecimal(request.getAmount()).setScale(2, RoundingMode.HALF_UP);
         int[] change = new int[6];
         BigDecimal[] coinVals = {new BigDecimal("1"),new BigDecimal("0.5"),new BigDecimal("0.25"),
