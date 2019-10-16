@@ -1,5 +1,6 @@
 package com.nat.change.controllers;
 
+import com.nat.change.bsuinessLogic.Calculator;
 import com.nat.change.dataAccess.models.ChangeRequest;
 import com.nat.change.dataAccess.models.Coins;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,7 @@ public class CoinCalc {
     @PostMapping(path = "/coincalc", consumes = "application/JSON", produces = "application/JSON")
     public Coins makeChange (@RequestBody ChangeRequest changeRequest) {
 
-        return new CoinCalc().makeChange(changeRequest);
+        return new Calculator().makeChange(changeRequest);
     }
 
     @GetMapping(path = "/hello")
