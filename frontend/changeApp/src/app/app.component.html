@@ -1,4 +1,5 @@
 <div class="container">
+<div class="form">
   <ng-form [formGroup]="inputForm">
     <mat-form-field>
       <label>
@@ -12,17 +13,13 @@
     Make Change
   </button>
 </div>
-<div>
-  <a>Silver dollars: </a>{{coinData.silverDollar}}
-  <br>
-  <a>Half dollars: </a>{{coinData.halfDollar}}
-  <br>
-  <a>Quarters: </a>{{coinData.quarter}}
-  <br>
-  <a>Dimes: </a>{{coinData.dime}}
-  <br>
-  <a>Nickels: </a>{{coinData.nickel}}
-  <br>
-  <a>Pennies: </a>{{coinData.penny}}
+<div class="output">
+  <h3>Silver dollars: </h3>{{coinData.silverDollar}}
+  <h3>Half dollars: </h3>{{coinData.halfDollar}}
+  <h3>Quarters: </h3>{{coinData.quarter}}
+  <h3>Dimes: </h3>{{coinData.dime}}
+  <h3>Nickels: </h3>{{coinData.nickel}}
+  <h3>Pennies: </h3>{{coinData.penny}}
 </div>
 <router-outlet></router-outlet>
+</div>
