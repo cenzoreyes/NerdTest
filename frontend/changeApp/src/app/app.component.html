@@ -1,35 +1,38 @@
-<div class="navbar">
-  <mat-toolbar color="primary">
-    <span>Nerd Assessment Test - Backend</span>
-
-    <!-- This fills the remaining space of the current row -->
-    <span class="fill-space"></span>
-
-    <span></span>
-  </mat-toolbar>
-</div>
-<div class="container">
-  <div class="form">
-    <ng-form [formGroup]="inputForm">
-      <mat-form-field appearance="outline">
-        <mat-icon matSuffix>attach_money</mat-icon>
-        <mat-label>Enter a dollar amount</mat-label>
-        <input matInput placeholder="0.00" formControlName="amountInput" [(ngModel)]="amount" required>
-      </mat-form-field>
-    </ng-form>
+<body>
+  <div class="navbar">
+    <mat-toolbar color="primary">
+      <span>Nerd Assessment Test - Backend</span>
+      <span class="fill-space"></span>
+      <span>
+        <a mat-fab color="primary" class="git-button" href="https://github.com/cenzoreyes/NerdTest">
+          <img src="../assets/buttonIcon/GitHub-Mark-Light-32px.png">
+        </a>
+      </span>
+    </mat-toolbar>
   </div>
-  <div class="button">
-    <button mat-raised-button (click)="makeChange()" color="primary">
-      Make Change
-    </button>
+  <div class="container">
+    <div class="form">
+      <ng-form [formGroup]="inputForm">
+        <mat-form-field appearance="outline" color="accent">
+          <mat-icon matSuffix>attach_money</mat-icon>
+          <mat-label>Enter a dollar amount</mat-label>
+          <input matInput placeholder="0.00" formControlName="amountInput" [(ngModel)]="amount" required>
+        </mat-form-field>
+      </ng-form>
+    </div>
+    <div class="button">
+      <button mat-raised-button (click)="makeChange()" color="primary">
+        Make Change
+      </button>
+    </div>
+    <div class="output">
+      <h4>Silver dollars: {{coinData.silverDollar}}</h4>
+      <h4>Half dollars: {{coinData.halfDollar}}</h4>
+      <h4>Quarters: {{coinData.quarter}}</h4>
+      <h4>Dimes: {{coinData.dime}}</h4>
+      <h4>Nickels: {{coinData.nickel}}</h4>
+      <h4>Pennies: {{coinData.penny}}</h4>
+    </div>
+    <router-outlet></router-outlet>
   </div>
-  <div class="output">
-    <h4><span>Silver dollars:</span>{{coinData.silverDollar}}</h4>
-    <h4>Half dollars: {{coinData.halfDollar}}</h4>
-    <h4>Quarters: {{coinData.quarter}}</h4>
-    <h4>Dimes: {{coinData.dime}}</h4>
-    <h4>Nickels: {{coinData.nickel}}</h4>
-    <h4>Pennies: {{coinData.penny}}</h4>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+</body>
