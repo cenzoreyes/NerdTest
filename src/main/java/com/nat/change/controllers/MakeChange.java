@@ -3,6 +3,7 @@ package com.nat.change.controllers;
 import com.nat.change.bsuinessLogic.Calculator;
 import com.nat.change.dataAccess.models.Request;
 import com.nat.change.dataAccess.models.Coins;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0
  * @since 2019-10-15
  */
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class MakeChange {
 
@@ -26,6 +28,7 @@ public class MakeChange {
     @PostMapping(path = "/coincalc", consumes = "application/JSON", produces = "application/JSON")
     public Coins makeChange (@RequestBody Request request) {
         //Instantiate a new Calculator, make change, and return the Coins object
+        System.out.println("Calculating change for: " + request.getAmount());
         return new Calculator().makeChange(request);
     }
 }
