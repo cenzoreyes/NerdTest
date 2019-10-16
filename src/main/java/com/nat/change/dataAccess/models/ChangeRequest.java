@@ -4,7 +4,6 @@ public class ChangeRequest {
     private double amount;
 
     public ChangeRequest() {
-
     }
 
     public double getAmount() {
