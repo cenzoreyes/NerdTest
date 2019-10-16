@@ -6,7 +6,7 @@ package com.nat.change.dataAccess.models;
  * @since 2019-10-15
  */
 public class Coins {
-
+    //TODO: Probably get rid of the dollar amount value here
     /** The dollar amount consumed in the API POST request */
     private double amount;
     /** Quantity of silver dollars in the amount */

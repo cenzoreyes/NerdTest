@@ -1,2 +1,18 @@
-
-<!--<router-outlet></router-outlet>-->
+<div class="container">
+  <ng-form [formGroup]="inputForm">
+    <mat-form-field>
+      <label>
+        <input matInput placeholder="0.00" formControlName="amountInput" [(ngModel)]="amount" required>
+      </label>
+    </mat-form-field>
+  </ng-form>
+</div>
+<div>
+  <button mat-raised-button (click)="makeChange()" color="primary">
+    Make Change
+  </button>
+</div>
+<div>
+<!--  <a [(ngModel)]="coinData.silverDollar"></a>-->
+</div>
+<router-outlet></router-outlet>
