@@ -9,19 +9,26 @@ public class Coins {
     private int dime;
     private int nickel;
     private int penny;
+    private int arr[];
 
     public Coins() {
     }
 
-    public Coins (double amount, int silverDollar, int halfDollar, int quarter, int dime, int nickel, int penny) {
+    public Coins (double amount, int[] arr) {
         this.amount = amount;
-        this.silverDollar = silverDollar;
-        this.halfDollar = halfDollar;
-        this.quarter = quarter;
-        this.dime = dime;
-        this.nickel = nickel;
-        this.penny = penny;
+        this.arr = arr;
     }
+
+//    public Coins (double amount, int[] arr, int silverDollar, int halfDollar, int quarter, int dime, int nickel, int penny) {
+//        this.amount = amount;
+//        this.silverDollar = silverDollar;
+//        this.halfDollar = halfDollar;
+//        this.quarter = quarter;
+//        this.dime = dime;
+//        this.nickel = nickel;
+//        this.penny = penny;
+//        this.arr = arr;
+//    }
 
     public int getSilverDollar() {
         return silverDollar;
@@ -29,6 +36,14 @@ public class Coins {
 
     public double getAmount() {
         return amount;
+    }
+
+    public int[] getArr() {
+        return arr;
+    }
+
+    public void setArr(int[] arr) {
+        this.arr = arr;
     }
 
     public void setAmount(double amount) {
