@@ -44,7 +44,7 @@ expands more in depth upon design choices, etc. than typical, to give the reader
  Once the user interface is running, you may open the java portion from the project root in your favorite IDE, and
  execute the Gradle build and bootrun tasks to launch the Spring Boot MVC server .JAR.
  
- *note:If you run into issues building and running the Angular project, you may need to install the Angular devkit.
+ *note: If you run into issues building and running the Angular project, you may need to install the Angular devkit.*
  
  Congratulations! You are now running my project. Feel free to poke around. :)
  
