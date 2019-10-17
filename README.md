@@ -25,7 +25,7 @@ expands more in depth upon design choices, etc. than typical, to give the reader
  
  * Node 6.10.xx or greater
  
- * Angular CLI 8.2.3 (some older vrsions may be forward compatible to run the project)
+ * Angular CLI 8.2.3 or greater (some older vrsions may be forward compatible to run the project)
  
  Once the project is cloned, navigate to the root folder of the user interface: "NerdTest\frontend\changeApp"
  and initialize & update node using the following commands:
@@ -35,12 +35,16 @@ expands more in depth upon design choices, etc. than typical, to give the reader
  >npm update
  
  Once node is updated you can build and open the user interface
- project using the following command:
+ project using the following commands:
+ 
+ >ng build
  
  >ng serve --open
  
  Once the user interface is running, you may open the java portion from the project root in your favorite IDE, and
  execute the Gradle build and bootrun tasks to launch the Spring Boot MVC server .JAR.
+ 
+ *note:If you run into issues building and running the Angular project, you may need to install the Angular devkit.
  
  Congratulations! You are now running my project. Feel free to poke around. :)
  
