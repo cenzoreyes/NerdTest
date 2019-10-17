@@ -1,5 +1,4 @@
 export class Coins {
-  amount: number;
   silverDollar: number;
   halfDollar: number;
   quarter: number;

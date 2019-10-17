@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {DataService} from './data.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Coins} from './Coins';
-import {log} from 'util';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,8 @@ import {log} from 'util';
 })
 export class AppComponent {
   title = 'changeApp';
-  amount = 0;
+  amount: number;
+  completed = false;
   inputForm = new FormGroup({amountInput: new FormControl('',[ Validators.required,
       Validators.pattern('^-?[0-9]\\d*(\\.\\d{1,2})?$')])});
   coinData = new Coins();
@@ -19,8 +19,8 @@ export class AppComponent {
   constructor(private service: DataService) {}
 
   async makeChange() {
+    this.completed = false;
     this.service.makeChange(this.amount).subscribe((data: Coins) => this.coinData = {
-      amount: data.amount,
       silverDollar: data.silverDollar,
       halfDollar: data.halfDollar,
       quarter: data.quarter,
@@ -28,5 +28,6 @@ export class AppComponent {
       nickel: data.nickel,
       penny: data.penny
     });
+    this.completed = true;
   }
 }

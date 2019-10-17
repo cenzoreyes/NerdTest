@@ -28,7 +28,6 @@ public class MakeChange {
     @PostMapping(path = "/coincalc", consumes = "application/JSON", produces = "application/JSON")
     public Coins makeChange (@RequestBody Request request) {
         //Instantiate a new Calculator, make change, and return the Coins object
-        System.out.println("Calculating change for: " + request.getAmount());
         return new Calculator().makeChange(request);
     }
 }

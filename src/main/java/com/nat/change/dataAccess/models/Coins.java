@@ -6,9 +6,6 @@ package com.nat.change.dataAccess.models;
  * @since 2019-10-15
  */
 public class Coins {
-    //TODO: Probably get rid of the dollar amount value here
-    /** The dollar amount consumed in the API POST request */
-    private double amount;
     /** Quantity of silver dollars in the amount */
     private int silverDollar;
     /** Quantity of half dollars in the amount */
@@ -28,11 +25,9 @@ public class Coins {
      * POST response to the Angular front end. Note the constructor consumes an array and maps the array's individual
      * values to each respective coin, in descending order of monetary value.
      *
-     * @param amount The dollar amount consumed in the API POST request
      * @param arr An array containing six values which represent coin quantities
      */
-    public Coins (double amount, int[] arr) {
-        this.amount = amount;
+    public Coins (int[] arr) {
         this.silverDollar = arr[0];
         this.halfDollar = arr[1];
         this.quarter = arr[2];
@@ -47,14 +42,6 @@ public class Coins {
 
     public int getSilverDollar() {
         return silverDollar;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
     }
 
     public void setSilverDollar(int silverDollar) {

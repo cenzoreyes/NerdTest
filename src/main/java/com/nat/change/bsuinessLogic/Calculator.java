@@ -37,8 +37,8 @@ public class Calculator {
                 new BigDecimal("0.1"),new BigDecimal("0.05"),new BigDecimal("0.01")};
 
         //Check if the request's dollar amount is zero or negative and exit the calculator if so (backend input control)
-        if (value.equals(0) || value.doubleValue() < 0) {
-            return new Coins(request.getAmount(), change);
+        if ((value.intValue() == 0) || (value.doubleValue() < 0)) {
+            return new Coins(change);
         }
         /*
         This is where the coin calculation occurs - Loop through the array of coin values and use a simulated integer
@@ -53,7 +53,7 @@ public class Calculator {
                     change[i] = x.intValue();
                     value = value.subtract(x.multiply(coinVals[i]));
                 }
-            return new Coins(request.getAmount(), change);
+            return new Coins(change);
         }
     }
 }

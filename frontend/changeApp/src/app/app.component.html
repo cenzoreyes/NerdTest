@@ -16,7 +16,7 @@
         <mat-form-field appearance="outline" color="accent">
           <mat-icon matSuffix>attach_money</mat-icon>
           <mat-label>Enter a dollar amount</mat-label>
-          <input matInput placeholder="0.00" maxlength="8" formControlName="amountInput" [(ngModel)]="amount" required>
+          <input matInput [(ngModel)]="amount" placeholder="0.00" maxlength="8" formControlName="amountInput" required>
         </mat-form-field>
       </ng-form>
     </div>
@@ -25,7 +25,7 @@
         Make Change
       </button>
     </div>
-    <div *ngIf="coinData.amount > 0" class="output">
+    <div *ngIf="this.completed === true && this.amount > 0" class="output">
       <h4>Silver dollars: {{coinData.silverDollar}}</h4>
       <h4>Half dollars: {{coinData.halfDollar}}</h4>
       <h4>Quarters: {{coinData.quarter}}</h4>
