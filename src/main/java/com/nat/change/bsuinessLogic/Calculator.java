@@ -37,7 +37,7 @@ public class Calculator {
                 new BigDecimal("0.1"),new BigDecimal("0.05"),new BigDecimal("0.01")};
 
         //Check if the request's dollar amount is zero or negative and exit the calculator if so (backend input control)
-        if ((value.intValue() == 0) || (value.doubleValue() < 0)) {
+        if ((value.doubleValue() == 0) || (value.doubleValue() < 0)) {
             return new Coins(change);
         }
         /*
