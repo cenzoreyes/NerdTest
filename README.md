@@ -19,7 +19,7 @@ expands more in depth upon design choices, etc. than typical, to give the reader
  
  # How to run this project locally
  
- First and foremost, esure you have the proper technology installed. This includes:
+ First and foremost, ensure you have the proper technology installed. This includes:
  
  * Java 1.8
  
